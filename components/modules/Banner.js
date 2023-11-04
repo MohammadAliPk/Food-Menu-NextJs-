@@ -1,7 +1,10 @@
-import Link from "next/link";
-import styles from "./Banner.module.css";
+import React from 'react';
 
-function Banner() {
+import styles from './Banner.module.css';
+
+import Link from 'next/link';
+
+const Banner = () => {
     return (
         <div className={styles.container}>
             <div className={styles.left}>
@@ -19,6 +22,6 @@ function Banner() {
             </div>
         </div>
     );
-}
+};
 
 export default Banner;

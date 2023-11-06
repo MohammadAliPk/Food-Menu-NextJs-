@@ -16,7 +16,7 @@ export default Categories;
 
 export async function getServerSideProps(context) {
     const { query: { difficulty, time } } = context;
-    const res = await axios.get('http://localhost:4000/data');
+    const res = await axios.get(`${process.env.BASE_URL}data`);
     const data = res.data;
     const filteredData = data.filter(item => {
         const difficultyResult = item.details.filter(detail => detail.Difficulty && detail.Difficulty === difficulty)

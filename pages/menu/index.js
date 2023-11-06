@@ -12,7 +12,7 @@ export default Menu;
 
 
 export async function getStaticProps() {
-    const res = await axios.get('http://localhost:4000/data');
+    const res = await axios.get(`${process.env.BASE_URL}data`);
     const data = res.data;
     return {
         props: {

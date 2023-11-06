@@ -20,7 +20,7 @@ const FoodDetails = (props) => {
 export default FoodDetails;
 
 export async function getStaticPaths() {
-    const res = await axios.get('http://localhost:4000/data');
+    const res = await axios.get(`${process.env.BASE_URL}data`);
     const data = res.data.slice(0, 10);
     const paths = data.map(food => ({ params: { id: food.id.toString() } }))
     return {
@@ -32,7 +32,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
     try {
         const { params: { id } } = context;
-        const res = await axios.get(`http://localhost:4000/data/${id}`);
+        const res = await axios.get(`${process.env.BASE_URL}data/${id}`);
         const data = res.data;
 
         return {

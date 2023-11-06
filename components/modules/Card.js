@@ -27,9 +27,9 @@ const Card = (props) => {
                         (price * (100 - discount) / 100)
                     }$</span> : <span className={styles.price}>{price}$</span>
                 }
-                {discount && <div className={styles.badge}>
+                {discount ? <div className={styles.badge}>
                     {discount}%
-                </div>}
+                </div> : null}
             </div>
             <Link href={`/menu/${id}`}>See Details</Link>
         </div>

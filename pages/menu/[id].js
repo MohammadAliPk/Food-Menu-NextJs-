@@ -1,8 +1,11 @@
-import axios from 'axios';
-import { useRouter } from 'next/router';
 import React from 'react';
+import { useRouter } from 'next/router';
+import axios from 'axios';
 
-const FoodDetails = () => {
+
+import DetailsPage from '@/components/templates/DetailsPage';
+
+const FoodDetails = (props) => {
 
     const router = useRouter();
     if (router.isFallback) {
@@ -10,9 +13,7 @@ const FoodDetails = () => {
     }
 
     return (
-        <div>
-            Details
-        </div>
+        <DetailsPage {...props.data} />
     );
 };
 

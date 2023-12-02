@@ -7,12 +7,13 @@ import styles from './Card.module.css';
 import Location from '../icons/Location';
 import Dollar from '../icons/Dollar';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Card = (props) => {
     const { id, name, price, details, discount } = props;
     return (
         <div className={styles.container}>
-            <img src={`/images/${id}.jpeg`} alt={name} />
+            <Image width={800} height={600} src={`/images/${id}.jpeg`} alt={name} />
             <div className={styles.details}>
                 <h4>{name}</h4>
                 <div>

@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './DetailsPage.module.css'
 import Location from '../icons/Location';
 import Dollar from '../icons/Dollar';
+import Image from 'next/image';
 
 const DetailsPage = (props) => {
 
@@ -14,7 +15,7 @@ const DetailsPage = (props) => {
             <h2>Details</h2>
             <div className={styles.subContainer}>
                 <div className={styles.banner}>
-                    <img src={`/images/${id}.jpeg`} alt={name} />
+                    <Image width={800} height={600} src={`/images/${id}.jpeg`} alt={name} />
                     <div>
                         <h3>{name}</h3>
                         <span className={styles.location}>

@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './Banner.module.css';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Banner = () => {
     return (
@@ -18,7 +19,7 @@ const Banner = () => {
                 <Link href="/menu">See All</Link>
             </div>
             <div className={styles.right}>
-                <img src="/images/banner.png" alt="Food image" />
+                <Image width={800} height={600} src="/images/banner.png" alt="Food image" />
             </div>
         </div>
     );
